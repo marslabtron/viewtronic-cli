@@ -7,6 +7,7 @@ var os = require('os')
 var path = require('path')
 var nugget = require('nugget')
 var extract = require('extract-zip')
+var remove = require('remove')
 
 var installedVersion = null
 try {
@@ -43,6 +44,7 @@ function extractFile (err) {
     if (err) return onerror(err)
     extract(path.join(__dirname,zipName), {dir: path.join(__dirname, 'dist')}, function (err) {
       if (err) return onerror(err)
+      remove(path.join(__dirname,zipName),function(){});
     })
   });
 }

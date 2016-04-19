@@ -4,7 +4,11 @@
   "description": "viewtronic cli tool",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "viewtronic-cli": "cli.js"
   },
   "keywords": [
     "cli"
@@ -13,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "extract-zip": "^1.5.0",
-    "nugget": "^2.0.0"
+    "nugget": "^2.0.0",
+    "remove": "^0.1.5"
   }
 }
