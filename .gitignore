@@ -1,3 +1,4 @@
 node_modules
 .paths
 dist
+.DS_Store
